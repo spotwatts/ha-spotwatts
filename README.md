@@ -11,7 +11,7 @@ from the ENTSO-E Transparency Platform.
 
 [![Open your Home Assistant instance and open this repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=spotwatts&repository=ha-spotwatts&category=integration)
 
-**Home Assistant 2026.11 and later:** **Marketplace → Add by link**, paste `https://github.com/spotwatts/ha-spotwatts`,
+**Home Assistant 2026.11 and later:** **Settings → Marketplace → Add from link**, paste `https://github.com/spotwatts/ha-spotwatts`,
 install **Spotwatts** and pick a price area. No restart needed.
 
 **Earlier versions with HACS:**
