@@ -1,0 +1,12 @@
+{
+  "domain": "spotwatts",
+  "name": "Spotwatts",
+  "codeowners": ["@ideea"],
+  "config_flow": true,
+  "documentation": "https://github.com/spotwatts/ha-spotwatts",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/spotwatts/ha-spotwatts/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}

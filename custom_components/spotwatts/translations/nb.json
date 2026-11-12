@@ -1,0 +1,90 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Spotwatts – prisområde",
+        "description": "Spotpriser på strøm fra spotwatts.com, gratis og uten API-nøkkel. Legg til én oppføring per prisområde.",
+        "data": {
+          "zone": "Prisområde",
+          "vat": "Inkluder mva"
+        },
+        "data_description": {
+          "zone": "Prisområdet der du bor. Norge, Sverige og Danmark er delt i flere, mens Finland og de baltiske landene har ett hver.",
+          "vat": "Prisene inkluderer landets mva på strøm. Husholdninger i NO4 betaler ikke mva."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Fikk ikke kontakt med spotwatts.com. Prøv igjen senere.",
+      "no_prices": "Dette prisområdet har ingen priser for i dag ennå."
+    },
+    "abort": {
+      "already_configured": "Dette prisområdet er allerede lagt til."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Innstillinger for Spotwatts",
+        "data": {
+          "vat": "Inkluder mva"
+        },
+        "data_description": {
+          "vat": "Prisene inkluderer landets mva på strøm. Husholdninger i NO4 betaler ikke mva."
+        }
+      }
+    }
+  },
+  "selector": {
+    "zone": {
+      "options": {
+        "no1": "NO1 – Østlandet (Oslo)",
+        "no2": "NO2 – Sørlandet (Kristiansand, Stavanger)",
+        "no3": "NO3 – Midt-Norge (Trondheim)",
+        "no4": "NO4 – Nord-Norge (Tromsø, Bodø)",
+        "no5": "NO5 – Vestlandet (Bergen)",
+        "se1": "SE1 – Luleå",
+        "se2": "SE2 – Sundsvall",
+        "se3": "SE3 – Stockholm",
+        "se4": "SE4 – Malmö",
+        "dk1": "DK1 – Vest-Danmark (Jylland, Fyn)",
+        "dk2": "DK2 – Øst-Danmark (Sjælland, København)",
+        "fi": "FI – Finland",
+        "ee": "EE – Estland",
+        "lt": "LT – Litauen",
+        "lv": "LV – Latvia"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "price": {
+        "name": "Pris"
+      },
+      "today_average": {
+        "name": "Snittpris i dag"
+      },
+      "today_min": {
+        "name": "Laveste pris i dag"
+      },
+      "today_max": {
+        "name": "Høyeste pris i dag"
+      },
+      "tomorrow_average": {
+        "name": "Snittpris i morgen"
+      },
+      "cheapest_1h": {
+        "name": "Billigste time"
+      },
+      "cheapest_2h": {
+        "name": "Billigste 2 timer"
+      },
+      "cheapest_3h": {
+        "name": "Billigste 3 timer"
+      },
+      "cheapest_4h": {
+        "name": "Billigste 4 timer"
+      }
+    }
+  }
+}

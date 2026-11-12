@@ -1,0 +1,13 @@
+{
+  "name": "Spotwatts",
+  "homeassistant": "2025.1.0",
+  "country": [
+    "NO",
+    "SE",
+    "DK",
+    "FI",
+    "EE",
+    "LT",
+    "LV"
+  ]
+}

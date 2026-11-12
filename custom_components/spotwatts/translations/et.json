@@ -1,0 +1,90 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Spotwatts – hinnapiirkond",
+        "description": "Elektri börsihinnad saidilt spotwatts.com, tasuta ja ilma API-võtmeta. Lisa iga hinnapiirkonna jaoks eraldi kirje.",
+        "data": {
+          "zone": "Hinnapiirkond",
+          "vat": "Hinnad käibemaksuga"
+        },
+        "data_description": {
+          "zone": "Hinnapiirkond, kus sa elad. Norras, Rootsis ja Taanis on neid mitu, Soomes ja igas Balti riigis üks.",
+          "vat": "Hindadele lisatakse riigis kehtiv elektri käibemaks. NO4 piirkonna kodutarbijad käibemaksu ei maksa."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Ühendus saidiga spotwatts.com nurjus. Proovi hiljem uuesti.",
+      "no_prices": "Selle hinnapiirkonna tänaseid hindu veel ei ole."
+    },
+    "abort": {
+      "already_configured": "See hinnapiirkond on juba lisatud."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Spotwattsi seaded",
+        "data": {
+          "vat": "Hinnad käibemaksuga"
+        },
+        "data_description": {
+          "vat": "Hindadele lisatakse riigis kehtiv elektri käibemaks. NO4 piirkonna kodutarbijad käibemaksu ei maksa."
+        }
+      }
+    }
+  },
+  "selector": {
+    "zone": {
+      "options": {
+        "no1": "NO1 – Ida-Norra (Oslo)",
+        "no2": "NO2 – Edela-Norra (Kristiansand, Stavanger)",
+        "no3": "NO3 – Kesk-Norra (Trondheim)",
+        "no4": "NO4 – Põhja-Norra (Tromsø, Bodø)",
+        "no5": "NO5 – Lääne-Norra (Bergen)",
+        "se1": "SE1 – Luleå",
+        "se2": "SE2 – Sundsvall",
+        "se3": "SE3 – Stockholm",
+        "se4": "SE4 – Malmö",
+        "dk1": "DK1 – Lääne-Taani (Jüütimaa, Fyn)",
+        "dk2": "DK2 – Ida-Taani (Sjælland, Kopenhaagen)",
+        "fi": "FI – Soome",
+        "ee": "EE – Eesti",
+        "lt": "LT – Leedu",
+        "lv": "LV – Läti"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "price": {
+        "name": "Hind"
+      },
+      "today_average": {
+        "name": "Keskmine hind täna"
+      },
+      "today_min": {
+        "name": "Madalaim hind täna"
+      },
+      "today_max": {
+        "name": "Kõrgeim hind täna"
+      },
+      "tomorrow_average": {
+        "name": "Keskmine hind homme"
+      },
+      "cheapest_1h": {
+        "name": "Odavaim tund"
+      },
+      "cheapest_2h": {
+        "name": "Odavaimad 2 tundi"
+      },
+      "cheapest_3h": {
+        "name": "Odavaimad 3 tundi"
+      },
+      "cheapest_4h": {
+        "name": "Odavaimad 4 tundi"
+      }
+    }
+  }
+}

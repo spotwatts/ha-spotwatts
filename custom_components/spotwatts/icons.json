@@ -1,0 +1,33 @@
+{
+  "entity": {
+    "sensor": {
+      "price": {
+        "default": "mdi:flash"
+      },
+      "today_average": {
+        "default": "mdi:chart-line"
+      },
+      "today_min": {
+        "default": "mdi:arrow-collapse-down"
+      },
+      "today_max": {
+        "default": "mdi:arrow-collapse-up"
+      },
+      "tomorrow_average": {
+        "default": "mdi:calendar-arrow-right"
+      },
+      "cheapest_1h": {
+        "default": "mdi:clock-start"
+      },
+      "cheapest_2h": {
+        "default": "mdi:clock-start"
+      },
+      "cheapest_3h": {
+        "default": "mdi:clock-start"
+      },
+      "cheapest_4h": {
+        "default": "mdi:clock-start"
+      }
+    }
+  }
+}

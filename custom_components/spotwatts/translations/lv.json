@@ -1,0 +1,90 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Spotwatts – cenu zona",
+        "description": "Elektroenerģijas biržas cenas no spotwatts.com, bez maksas un bez API atslēgas. Katrai cenu zonai pievienojiet atsevišķu ierakstu.",
+        "data": {
+          "zone": "Cenu zona",
+          "vat": "Iekļaut PVN"
+        },
+        "data_description": {
+          "zone": "Cenu zona, kurā dzīvojat. Norvēģijā, Zviedrijā un Dānijā to ir vairākas, Somijā un katrā Baltijas valstī – viena.",
+          "vat": "Cenām pieskaita valstī noteikto elektroenerģijas PVN. NO4 zonā mājsaimniecības PVN nemaksā."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Neizdevās savienoties ar spotwatts.com. Mēģiniet vēlreiz vēlāk.",
+      "no_prices": "Šai cenu zonai šodienas cenu vēl nav."
+    },
+    "abort": {
+      "already_configured": "Šī cenu zona jau ir pievienota."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Spotwatts iestatījumi",
+        "data": {
+          "vat": "Iekļaut PVN"
+        },
+        "data_description": {
+          "vat": "Cenām pieskaita valstī noteikto elektroenerģijas PVN. NO4 zonā mājsaimniecības PVN nemaksā."
+        }
+      }
+    }
+  },
+  "selector": {
+    "zone": {
+      "options": {
+        "no1": "NO1 – Austrumnorvēģija (Oslo)",
+        "no2": "NO2 – Dienvidrietumu Norvēģija (Kristiansanna, Stavangera)",
+        "no3": "NO3 – Centrālā Norvēģija (Tronheima)",
+        "no4": "NO4 – Ziemeļnorvēģija (Tromse, Bodø)",
+        "no5": "NO5 – Rietumnorvēģija (Bergena)",
+        "se1": "SE1 – Luleo",
+        "se2": "SE2 – Sundsvala",
+        "se3": "SE3 – Stokholma",
+        "se4": "SE4 – Malme",
+        "dk1": "DK1 – Rietumdānija (Jitlande, Fīne)",
+        "dk2": "DK2 – Austrumdānija (Zēlande, Kopenhāgena)",
+        "fi": "FI – Somija",
+        "ee": "EE – Igaunija",
+        "lt": "LT – Lietuva",
+        "lv": "LV – Latvija"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "price": {
+        "name": "Cena"
+      },
+      "today_average": {
+        "name": "Vidējā cena šodien"
+      },
+      "today_min": {
+        "name": "Zemākā cena šodien"
+      },
+      "today_max": {
+        "name": "Augstākā cena šodien"
+      },
+      "tomorrow_average": {
+        "name": "Vidējā cena rīt"
+      },
+      "cheapest_1h": {
+        "name": "Lētākā stunda"
+      },
+      "cheapest_2h": {
+        "name": "Lētākās 2 stundas"
+      },
+      "cheapest_3h": {
+        "name": "Lētākās 3 stundas"
+      },
+      "cheapest_4h": {
+        "name": "Lētākās 4 stundas"
+      }
+    }
+  }
+}

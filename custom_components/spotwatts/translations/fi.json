@@ -1,0 +1,90 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Spotwatts – hinta-alue",
+        "description": "Sähkön pörssihinnat spotwatts.com-palvelusta, maksutta ja ilman API-avainta. Lisää oma merkintä jokaiselle hinta-alueelle.",
+        "data": {
+          "zone": "Hinta-alue",
+          "vat": "Sisällytä alv"
+        },
+        "data_description": {
+          "zone": "Hinta-alue, jolla asut. Norjassa, Ruotsissa ja Tanskassa niitä on useita, Suomessa ja kussakin Baltian maassa yksi.",
+          "vat": "Hintoihin lisätään maan sähkön arvonlisävero. Alueella NO4 kotitaloudet eivät maksa alv:tä."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Yhteyttä spotwatts.com-palveluun ei saatu. Yritä myöhemmin uudelleen.",
+      "no_prices": "Tälle hinta-alueelle ei ole vielä tämän päivän hintoja."
+    },
+    "abort": {
+      "already_configured": "Tämä hinta-alue on jo lisätty."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Spotwatts-asetukset",
+        "data": {
+          "vat": "Sisällytä alv"
+        },
+        "data_description": {
+          "vat": "Hintoihin lisätään maan sähkön arvonlisävero. Alueella NO4 kotitaloudet eivät maksa alv:tä."
+        }
+      }
+    }
+  },
+  "selector": {
+    "zone": {
+      "options": {
+        "no1": "NO1 – Itä-Norja (Oslo)",
+        "no2": "NO2 – Lounais-Norja (Kristiansand, Stavanger)",
+        "no3": "NO3 – Keski-Norja (Trondheim)",
+        "no4": "NO4 – Pohjois-Norja (Tromssa, Bodø)",
+        "no5": "NO5 – Länsi-Norja (Bergen)",
+        "se1": "SE1 – Luulaja",
+        "se2": "SE2 – Sundsvall",
+        "se3": "SE3 – Tukholma",
+        "se4": "SE4 – Malmö",
+        "dk1": "DK1 – Länsi-Tanska (Jyllanti, Fyn)",
+        "dk2": "DK2 – Itä-Tanska (Seelanti, Kööpenhamina)",
+        "fi": "FI – Suomi",
+        "ee": "EE – Viro",
+        "lt": "LT – Liettua",
+        "lv": "LV – Latvia"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "price": {
+        "name": "Hinta"
+      },
+      "today_average": {
+        "name": "Keskihinta tänään"
+      },
+      "today_min": {
+        "name": "Alin hinta tänään"
+      },
+      "today_max": {
+        "name": "Ylin hinta tänään"
+      },
+      "tomorrow_average": {
+        "name": "Keskihinta huomenna"
+      },
+      "cheapest_1h": {
+        "name": "Halvin tunti"
+      },
+      "cheapest_2h": {
+        "name": "Halvimmat 2 tuntia"
+      },
+      "cheapest_3h": {
+        "name": "Halvimmat 3 tuntia"
+      },
+      "cheapest_4h": {
+        "name": "Halvimmat 4 tuntia"
+      }
+    }
+  }
+}

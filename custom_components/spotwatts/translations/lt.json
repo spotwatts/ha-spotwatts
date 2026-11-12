@@ -1,0 +1,90 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Spotwatts – kainų zona",
+        "description": "Elektros biržos kainos iš spotwatts.com, nemokamai ir be API rakto. Kiekvienai kainų zonai pridėkite atskirą įrašą.",
+        "data": {
+          "zone": "Kainų zona",
+          "vat": "Įtraukti PVM"
+        },
+        "data_description": {
+          "zone": "Kainų zona, kurioje gyvenate. Norvegijoje, Švedijoje ir Danijoje jų yra kelios, Suomijoje ir kiekvienoje Baltijos šalyje – po vieną.",
+          "vat": "Prie kainų pridedamas šalyje taikomas elektros PVM. NO4 zonos namų ūkiai PVM nemoka."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nepavyko prisijungti prie spotwatts.com. Bandykite vėliau.",
+      "no_prices": "Šios kainų zonos šiandienos kainų dar nėra."
+    },
+    "abort": {
+      "already_configured": "Ši kainų zona jau pridėta."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Spotwatts nustatymai",
+        "data": {
+          "vat": "Įtraukti PVM"
+        },
+        "data_description": {
+          "vat": "Prie kainų pridedamas šalyje taikomas elektros PVM. NO4 zonos namų ūkiai PVM nemoka."
+        }
+      }
+    }
+  },
+  "selector": {
+    "zone": {
+      "options": {
+        "no1": "NO1 – Rytų Norvegija (Oslas)",
+        "no2": "NO2 – Pietvakarių Norvegija (Kristiansandas, Stavangeris)",
+        "no3": "NO3 – Vidurio Norvegija (Trondheimas)",
+        "no4": "NO4 – Šiaurės Norvegija (Tromsė, Bodø)",
+        "no5": "NO5 – Vakarų Norvegija (Bergenas)",
+        "se1": "SE1 – Liuleo",
+        "se2": "SE2 – Sundsvalis",
+        "se3": "SE3 – Stokholmas",
+        "se4": "SE4 – Malmė",
+        "dk1": "DK1 – Vakarų Danija (Jutlandija, Fiunas)",
+        "dk2": "DK2 – Rytų Danija (Zelandija, Kopenhaga)",
+        "fi": "FI – Suomija",
+        "ee": "EE – Estija",
+        "lt": "LT – Lietuva",
+        "lv": "LV – Latvija"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "price": {
+        "name": "Kaina"
+      },
+      "today_average": {
+        "name": "Vidutinė kaina šiandien"
+      },
+      "today_min": {
+        "name": "Mažiausia kaina šiandien"
+      },
+      "today_max": {
+        "name": "Didžiausia kaina šiandien"
+      },
+      "tomorrow_average": {
+        "name": "Vidutinė kaina rytoj"
+      },
+      "cheapest_1h": {
+        "name": "Pigiausia valanda"
+      },
+      "cheapest_2h": {
+        "name": "Pigiausios 2 valandos"
+      },
+      "cheapest_3h": {
+        "name": "Pigiausios 3 valandos"
+      },
+      "cheapest_4h": {
+        "name": "Pigiausios 4 valandos"
+      }
+    }
+  }
+}

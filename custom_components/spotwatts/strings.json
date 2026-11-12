@@ -1,0 +1,90 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Spotwatts price area",
+        "description": "Day-ahead electricity prices from spotwatts.com, free and without an API key. Add one entry per price area.",
+        "data": {
+          "zone": "Price area",
+          "vat": "Include VAT"
+        },
+        "data_description": {
+          "vat": "Prices with the country's VAT on electricity (NO4: none).",
+          "zone": "Your area on the day-ahead market. Norway, Sweden and Denmark have several; Finland and the Baltic states one each."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach spotwatts.com. Try again later.",
+      "no_prices": "There are no prices for this price area today yet."
+    },
+    "abort": {
+      "already_configured": "This price area is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Spotwatts options",
+        "data": {
+          "vat": "Include VAT"
+        },
+        "data_description": {
+          "vat": "Prices with the country's VAT on electricity (NO4: none)."
+        }
+      }
+    }
+  },
+  "selector": {
+    "zone": {
+      "options": {
+        "no1": "NO1 – Eastern Norway (Oslo)",
+        "no2": "NO2 – Southwest Norway (Kristiansand, Stavanger)",
+        "no3": "NO3 – Central Norway (Trondheim)",
+        "no4": "NO4 – Northern Norway (Tromsø, Bodø)",
+        "no5": "NO5 – Western Norway (Bergen)",
+        "se1": "SE1 – Luleå",
+        "se2": "SE2 – Sundsvall",
+        "se3": "SE3 – Stockholm",
+        "se4": "SE4 – Malmö",
+        "dk1": "DK1 – West Denmark (Jutland, Funen)",
+        "dk2": "DK2 – East Denmark (Zealand, Copenhagen)",
+        "fi": "FI – Finland",
+        "ee": "EE – Estonia",
+        "lt": "LT – Lithuania",
+        "lv": "LV – Latvia"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "price": {
+        "name": "Price"
+      },
+      "today_average": {
+        "name": "Average today"
+      },
+      "today_min": {
+        "name": "Lowest today"
+      },
+      "today_max": {
+        "name": "Highest today"
+      },
+      "tomorrow_average": {
+        "name": "Average tomorrow"
+      },
+      "cheapest_1h": {
+        "name": "Cheapest hour"
+      },
+      "cheapest_2h": {
+        "name": "Cheapest 2 hours"
+      },
+      "cheapest_3h": {
+        "name": "Cheapest 3 hours"
+      },
+      "cheapest_4h": {
+        "name": "Cheapest 4 hours"
+      }
+    }
+  }
+}

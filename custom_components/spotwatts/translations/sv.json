@@ -1,0 +1,90 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Spotwatts – elområde",
+        "description": "Spotpriser på el från spotwatts.com, gratis och utan API-nyckel. Lägg till en post för varje elområde.",
+        "data": {
+          "zone": "Elområde",
+          "vat": "Inkludera moms"
+        },
+        "data_description": {
+          "zone": "Elområdet där du bor. Norge, Sverige och Danmark är indelade i flera, medan Finland och de baltiska länderna har ett var.",
+          "vat": "Priserna inkluderar landets moms på el. Hushåll i NO4 betalar ingen moms."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Det gick inte att nå spotwatts.com. Försök igen senare.",
+      "no_prices": "Det finns inga priser för idag i det här elområdet ännu."
+    },
+    "abort": {
+      "already_configured": "Det här elområdet är redan tillagt."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Inställningar för Spotwatts",
+        "data": {
+          "vat": "Inkludera moms"
+        },
+        "data_description": {
+          "vat": "Priserna inkluderar landets moms på el. Hushåll i NO4 betalar ingen moms."
+        }
+      }
+    }
+  },
+  "selector": {
+    "zone": {
+      "options": {
+        "no1": "NO1 – Östnorge (Oslo)",
+        "no2": "NO2 – Sydvästnorge (Kristiansand, Stavanger)",
+        "no3": "NO3 – Mittnorge (Trondheim)",
+        "no4": "NO4 – Nordnorge (Tromsø, Bodø)",
+        "no5": "NO5 – Västnorge (Bergen)",
+        "se1": "SE1 – Luleå",
+        "se2": "SE2 – Sundsvall",
+        "se3": "SE3 – Stockholm",
+        "se4": "SE4 – Malmö",
+        "dk1": "DK1 – Västdanmark (Jylland, Fyn)",
+        "dk2": "DK2 – Östdanmark (Själland, Köpenhamn)",
+        "fi": "FI – Finland",
+        "ee": "EE – Estland",
+        "lt": "LT – Litauen",
+        "lv": "LV – Lettland"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "price": {
+        "name": "Pris"
+      },
+      "today_average": {
+        "name": "Snittpris idag"
+      },
+      "today_min": {
+        "name": "Lägsta pris idag"
+      },
+      "today_max": {
+        "name": "Högsta pris idag"
+      },
+      "tomorrow_average": {
+        "name": "Snittpris imorgon"
+      },
+      "cheapest_1h": {
+        "name": "Billigaste timmen"
+      },
+      "cheapest_2h": {
+        "name": "Billigaste 2 timmarna"
+      },
+      "cheapest_3h": {
+        "name": "Billigaste 3 timmarna"
+      },
+      "cheapest_4h": {
+        "name": "Billigaste 4 timmarna"
+      }
+    }
+  }
+}
