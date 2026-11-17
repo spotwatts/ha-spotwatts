@@ -3,9 +3,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, tzinfo
 import logging
-from zoneinfo import ZoneInfo
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
@@ -14,7 +13,7 @@ from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, Upda
 from homeassistant.util import dt as dt_util
 
 from .api import Day, Interval, SpotwattsClient, SpotwattsError
-from .const import AUCTION_RESULTS, AUCTION_TZ, CONF_ZONE, DOMAIN, UPDATE_INTERVAL, ZONES
+from .const import AUCTION_RESULTS, AUCTION_TZ, CONF_ZONE, DOMAIN, UPDATE_INTERVAL
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -33,9 +32,10 @@ class Prices:
 class SpotwattsCoordinator(DataUpdateCoordinator[Prices]):
     """Requests a day only while it is missing: today once a day, tomorrow from the auction until published."""
 
-    def __init__(self, hass: HomeAssistant, entry: ConfigEntry) -> None:
+    def __init__(self, hass: HomeAssistant, entry: ConfigEntry, timezone: tzinfo) -> None:
+        """The zone's time zone comes loaded: reading tz data from disk must not run on the event loop."""
         self.zone: str = entry.data[CONF_ZONE]
-        self.timezone = ZoneInfo(ZONES[self.zone])
+        self.timezone = timezone
         self._client = SpotwattsClient(async_get_clientsession(hass))
         super().__init__(
             hass, _LOGGER, config_entry=entry, name=f"{DOMAIN} {self.zone}", update_interval=UPDATE_INTERVAL

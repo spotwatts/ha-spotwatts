@@ -24,7 +24,7 @@ class SpotwattsConfigFlow(ConfigFlow, domain=DOMAIN):
             zone = user_input[CONF_ZONE].upper()
             await self.async_set_unique_id(zone)
             self._abort_if_unique_id_configured()
-            today = dt_util.utcnow().astimezone(dt_util.get_time_zone(ZONES[zone])).date()
+            today = dt_util.utcnow().astimezone(await dt_util.async_get_time_zone(ZONES[zone])).date()
             try:
                 day = await SpotwattsClient(async_get_clientsession(self.hass)).day(zone, today)
             except SpotwattsError:
