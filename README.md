@@ -16,8 +16,7 @@ install **Spotwatts** and pick a price area. No restart needed.
 
 **Earlier versions with HACS:**
 
-1. In HACS, open the menu → **Custom repositories**, add `https://github.com/spotwatts/ha-spotwatts` as an
-   **Integration**, then download **Spotwatts**.
+1. In HACS, search for **Spotwatts** and download it.
 2. Restart Home Assistant.
 3. **Settings → Devices & services → Add integration → Spotwatts**, pick a price area.
 
